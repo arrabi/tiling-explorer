@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+#pattern-section, #tiling-section {
+  margin: 20px auto;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+#pattern-grid, #tiling-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 32px);
+  grid-gap: 4px;
+  margin: 20px 0;
+}
+.square {
+  width: 32px;
+  height: 32px;
+  background: #e0e0e0;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.square.active {
+  background: #2196f3;
+  border-color: #1976d2;
+}
+.tiled-square {
+  border: 1px solid #888;
+  border-radius: 4px;
+}
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #1976d2;
+}
