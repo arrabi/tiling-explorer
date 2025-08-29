@@ -1,0 +1,13 @@
+{
+  "name": "tiling-explorer",
+  "version": "1.0.0",
+  "description": "A simple app that helps students explore how patterns can be used to tile a surface.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
+}
