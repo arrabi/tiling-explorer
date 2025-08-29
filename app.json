@@ -1,0 +1,6 @@
+{
+  "project_title": "tile-explorer",
+  "description": "A simple app that helps students explore how patterns can be used to tile a surface.",
+  "category": ["educational", "math"],
+  "app_type": "simple web app, html and js"
+}
