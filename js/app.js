@@ -75,16 +75,23 @@ function renderTilingGrid(tiles) {
       }
     });
   });
+  let covered = 0;
   for (let r = 0; r < TILING_ROWS; r++) {
     for (let c = 0; c < TILING_COLS; c++) {
       const sq = document.createElement('div');
       sq.className = 'square tiled-square';
       if (grid[r][c] !== null) {
         sq.style.background = COLORS[grid[r][c] % COLORS.length];
+        covered++;
       }
       tilingGrid.appendChild(sq);
     }
   }
+  // Display coverage info
+  const coverageInfo = document.getElementById('coverage-info');
+  const total = TILING_ROWS * TILING_COLS;
+  const percent = total === 0 ? 0 : Math.round((covered / total) * 100);
+  coverageInfo.textContent = `Coverage: ${covered} / ${total} squares (${percent}%)`;
 }
 
 function canPlace(grid, shape, r0, c0) {
