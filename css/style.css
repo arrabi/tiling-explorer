@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
@@ -8,19 +9,26 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
-#pattern-section, #tiling-section {
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 1200px;
+}
+#pattern-section, #tiling-section {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1;
 }
 #pattern-grid, #tiling-grid {
   display: grid;
   grid-template-columns: repeat(6, 32px);
   grid-gap: 4px;
   margin: 20px 0;
+  justify-content: center;
 }
 .square {
   width: 32px;
@@ -51,4 +59,16 @@ button {
 }
 button:hover {
   background: #1976d2;
+}
+
+@media (min-width: 900px) {
+  .main-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  #pattern-section, #tiling-section {
+    margin: 0;
+    max-width: none;
+  }
 }
